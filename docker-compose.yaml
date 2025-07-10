@@ -1,0 +1,33 @@
+version: '3.8'
+
+networks:
+  weathernet:
+
+services:
+  weatherdb-host:
+    container_name: weatherdb-host
+    build:
+      context: .
+      dockerfile: Dockerfile.sqlserver
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Password123
+    networks:
+      - weathernet
+    ports:
+      - 8002:1433
+    
+  weather-service-api:
+    container_name: weather-service-api
+    image: weather-service-api
+    build:
+      context: .
+      dockerfile: Dockerfile.weatherapi
+    networks:
+      - weathernet
+    environment: 
+      - DB_HOST=weatherdb-host
+      - WEATHER_DB_NAME=WeatherDB
+      - DB_SA_PASSWORD=Password123
+    depends_on:
+      - weatherdb-host

@@ -1,0 +1,10 @@
+FROM mcr.microsoft.com/mssql/server:2022-latest
+
+ENV ACCEPT_EULA=Y
+ENV SA_PASSWORD=Password123
+
+COPY setup.sql /usr/src/app/setup.sql
+
+COPY entrypoint.sh /usr/src/app/entrypoint.sh
+
+CMD ["bash", "/usr/src/app/entrypoint.sh"]
