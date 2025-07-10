@@ -1,0 +1,29 @@
+@WeatherApi_HostAddress = http://localhost:5144
+
+### Get all weather records from database
+GET {{WeatherApi_HostAddress}}/api/weather
+Accept: application/json
+
+###
+
+### Get weather by ID
+GET {{WeatherApi_HostAddress}}/api/weather/1
+Accept: application/json
+
+###
+
+### Get weather by coordinates (will check database first, then API if needed)
+GET {{WeatherApi_HostAddress}}/api/weather/coordinates?latitude=51.5074&longitude=-0.1278
+Accept: application/json
+
+###
+
+### Get weather for New York coordinates
+GET {{WeatherApi_HostAddress}}/api/weather/coordinates?latitude=40.7128&longitude=-74.0060
+Accept: application/json
+
+###
+
+### Get weather for Tokyo coordinates  
+GET {{WeatherApi_HostAddress}}/api/weather/coordinates?latitude=35.6762&longitude=139.6503
+Accept: application/json
