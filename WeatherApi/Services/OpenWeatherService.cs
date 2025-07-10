@@ -18,8 +18,8 @@ namespace WeatherApi.Services
         {
             _httpClient = httpClient;
             _logger = logger;
-            _apiKey = configuration["OpenWeatherApi:ApiKey"] 
-                ?? throw new ArgumentException("OpenWeather API key not found in configuration.");
+            _apiKey = Environment.GetEnvironmentVariable("OPENWEATHER_API_KEY") 
+                ?? throw new ArgumentException("OpenWeather API key not found in environment variables.");
         }
 
         public async Task<Weather?> GetWeatherByCoordinatesAsync(decimal latitude, decimal longitude)

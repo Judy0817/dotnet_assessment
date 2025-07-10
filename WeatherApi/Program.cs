@@ -1,4 +1,8 @@
 using WeatherApi.Services;
+using DotNetEnv;
+
+// Load environment variables from .env file
+Env.Load(Path.Combine(Directory.GetCurrentDirectory(), "..", ".env"));
 
 var builder = WebApplication.CreateBuilder(args);
 

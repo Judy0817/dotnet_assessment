@@ -38,3 +38,5 @@ D:\Assessment_NET\dotnet_assessment\WeatherApi\obj\Debug\net8.0\refint\WeatherAp
 D:\Assessment_NET\dotnet_assessment\WeatherApi\obj\Debug\net8.0\WeatherApi.pdb
 D:\Assessment_NET\dotnet_assessment\WeatherApi\obj\Debug\net8.0\WeatherApi.genruntimeconfig.cache
 D:\Assessment_NET\dotnet_assessment\WeatherApi\obj\Debug\net8.0\ref\WeatherApi.dll
+D:\Assessment_NET\dotnet_assessment\WeatherApi\bin\Debug\net8.0\DotNetEnv.dll
+D:\Assessment_NET\dotnet_assessment\WeatherApi\bin\Debug\net8.0\Sprache.dll
